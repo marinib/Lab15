@@ -11,11 +11,14 @@ public class CountriesMainApp {
         //Initializing scanner
         Scanner scan = new Scanner(System.in);
 
+        //Start of repeating do/while loop which will repeat the prompt based on user input
         //Setting the boolean to true for do-while loop
         boolean doAgain = true;
-        //Start of repeating do/while loop which will repeat the prompt based on user input,
+
         do {
-            int userChoice = Validator.getInt(scan,"\n1. See the list of countries \n2. Add a country \n3. Exit\n", 1, 3);
+            int userChoice = Validator.getInt(scan,"\n1. See the list of countries \n2. Add a country \n3. Exit\n",
+                    1, 3); //Implemented Validator class to eliminate prompt/input errors
+                                    // github.com/grandcircusco/java_april2017/tree/master/Resources
 
             //This is where the method reads the CountriesTextFile class
             if (userChoice == 1) {
