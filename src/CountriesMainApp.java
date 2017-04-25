@@ -11,18 +11,17 @@ public class CountriesMainApp {
         //Initializing scanner
         Scanner scan = new Scanner(System.in);
 
-        //Start of repeating do/while loop which will repeat the prompt based on user input, setting the boolean to true
+        //Setting the boolean to true for do-while loop
         boolean doAgain = true;
-
-        //
-        do {System.out.println("\n1. See the list of countries \n2. Add a country \n3. Exit");
-            int userChoice = scan.nextInt();
+        //Start of repeating do/while loop which will repeat the prompt based on user input,
+        do {
+            int userChoice = Validator.getInt(scan,"\n1. See the list of countries \n2. Add a country \n3. Exit\n", 1, 3);
 
             //This is where the method reads the CountriesTextFile class
             if (userChoice == 1) {
                 System.out.println("The countries are: ");
                 CountriesTextFile.readFromFile();
-            //This is were the method writes to Country.txt through CountriesTextFile class
+                //This is were the method writes to Country.txt through CountriesTextFile class
             } else if (userChoice == 2) {
                 Scanner scan2 = new Scanner(System.in);
                 CountriesTextFile.writeToFile(scan2);
@@ -32,7 +31,7 @@ public class CountriesMainApp {
             } else {
                 System.out.println("This is not a valid input");
             }
-
+            //The loop will repeat if doAgain
         } while (doAgain);
     }
 }

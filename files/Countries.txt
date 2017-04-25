@@ -1,8 +1,6 @@
 
-USA
 Albania
+USA
 Italy
 Greece
-italy
-albania
 IT WORKS!
